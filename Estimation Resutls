@@ -1,0 +1,32 @@
+fixed1 <-  plm(rtfpna ~ hc_1 + inflation + open + csh_g + csh_i + labsh + time
++                , data=pdf, model="within")
+> summary(fixed1)
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = rtfpna ~ hc_1 + inflation + open + csh_g + csh_i + 
+    labsh + time, data = pdf, model = "within")
+
+Unbalanced Panel: n = 6, T = 24-27, N = 159
+
+Residuals:
+     Min.   1st Qu.    Median   3rd Qu.      Max. 
+-0.101911 -0.026340  0.001383  0.020878  0.120770 
+
+Coefficients:
+            Estimate Std. Error  t-value  Pr(>|t|)    
+hc_1      -0.5022400  0.0366238 -13.7135 < 2.2e-16 ***
+inflation  0.0296555  0.0288820   1.0268 0.3062214    
+open       0.4546906  0.1647067   2.7606 0.0065100 ** 
+csh_g     -0.3689975  0.1083063  -3.4070 0.0008489 ***
+csh_i      0.5994848  0.0699590   8.5691 1.362e-14 ***
+labsh      0.0702933  0.1095756   0.6415 0.5222004    
+time       0.0177649  0.0011259  15.7788 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    1.1549
+Residual Sum of Squares: 0.19403
+R-Squared:      0.83198
+Adj. R-Squared: 0.81817
+F-statistic: 103.28 on 7 and 146 DF, p-value: < 2.22e-16
